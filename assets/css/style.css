@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Sen:wght@700&display=swap');
+
+:root {
+    --primary-color: #FFB900;
+    --very-dark: #171100;
+    --fst-bg-color: #2E2100;
+    --text-color: #5F5B53;
+    --nd-bg-color: #FFFCF4;
+    --text-white: #fff;
+    --text-color-light-gray: #BFBCB2;
+
+    --fz-18: 1.8rem;
+    --fz-16: 1.6rem;
+    --fz-14: 1.4rem;
+    --fz-26: 2.6rem;
+    --fz-24: 2.4rem;
+    --fz-38: 3.8rem;
+    --fz-60: 6rem;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: var(--fz-16);
+    font-family: 'Poppins', sans-serif;
+}
+
+/*=== REUSED STYLE ===*/
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.container {
+    width: 1170px;
+    max-width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.btn {
+    min-width: 118px;
+    padding: 0 11px;
+    color: var(--text-white);
+    text-align: center;
+    font-size: var(--fz-16);
+    font-weight: 600;
+    line-height: 50px;
+    background-color: var(--very-dark);
+    border-radius: 999px;
+}
+
+/*=== HEADER ===*/
+.header {
+    height: 100vh;
+    background-color: var(--nd-bg-color);
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    padding-top: 36px;
+}
+
+.logo {
+    margin-right: 491px;
+    color: var(--very-dark);
+    font-family: 'Sen', sans-serif;
+    font-size: var(--fz-24);
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.logo span {
+    color: var(--primary-color);
+    font-size: var(--fz-24);
+    font-weight: 700;
+}
+
+.menu-list {
+    display: flex;
+}
+
+.nav-menu .menu-item {
+    padding: 8px 21px;
+    color: #5F5B53;
+    text-align: center;
+    font-size: var(--fz-16);
+    font-weight: 500;
+    line-height: 1.75;
+}
+
+.nav-menu .menu-catalog:first-child .menu-item {
+    position: relative;
+    color: var(--very-dark);
+    text-align: center;
+    font-size: var(--fz-16);
+    font-weight: 600;
+}
+
+.header .cta {
+    margin-left: 49px;
+}
+
+.signup-btn {
+    min-width: 135px;
+}
