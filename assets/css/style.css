@@ -114,6 +114,10 @@ a {
     --line-clamp: 2;
 }
 
+.break-all {
+    word-break: break-word;
+}
+
 /*=== HEADER ===*/
 .header {
     background: var(--nd-bg-color);
@@ -434,14 +438,246 @@ a {
 
 /*=== FEEDBACK ===*/
 .feedback {
-
+    margin-top: 135px;
+    padding: 96px 0;
+    background: var(--fst-bg-color);
 }
 
 .feedback-list {
     display: flex;
+    overflow: hidden;
 }
 
 .feedback-item {
     display: flex;
+    flex-shrink: 0;
+    width: 100%;
+    /* Kích thước bằng 100% kích thước cha */
+}
+
+.feedback-item .avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.feedback-item .info .title {
+    margin-top: 18px;
+    color: #F7F7F7;
+    font-size: var(--fz-24);
+    line-height: 1.42;
+}
+
+.feedback-item .info .desc {
+    margin-top: 4px;
+}
+
+.feedback-item .dots {
+    display: flex;
+    margin-top: 28px;
+    gap: 6px;
+}
+
+.feedback-item .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #634700;
+    cursor: pointer;
+}
+
+.feedback-item .dot.active {
+    background: var(--primary-color);
+    cursor: default;
+}
+
+.feedback-item .reviews {
+    width: 66%;
+    margin-left: auto;
+}
+
+.feedback-item blockquote {
+    margin-left: 30px;
+    color: var(--text-white);
+    font-size: var(--fz-26);
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.53;
+}
+
+/*=== FEATURES ===*/
+.features {
+    margin-top: 135px;
+    padding: 65px 0;
+}
+
+.features .body {
+    display: flex;
+}
+
+.features .list-images {
+    display: flex;
+    gap: 0 30px;
+    width: 48%;
+    margin-right: 130px;
+}
+
+.features .list-images img {
+    width: 270px;
+    height: 404px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.features .list-images .lower {
+    margin-top: 34px;
+}
+
+
+.features .info {
+    width: 52%;
+    margin: 58px 0;
+}
+
+.features .desc {
+    margin: 16px 0;
+}
+
+.features .cta-btn {
+    min-width: 137px;
+    margin-top: 16px;
+    background: var(--primary-color);
+}
+
+/*=== FEATURES SECOND ===*/
+.features.features-two .images {
+    margin-left: 130px;
+}
+
+
+.features.features-two .images img {
+    width: 470px;
+    height: 440px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/*=== BLOG ===*/
+.blog {
+    padding: 65px 0;
+    margin-top: 135px;
+    background: var(--nd-bg-color);
+}
+
+.blog .blog-top {
+    text-align: center;
+}
+
+.blog-top .desc {
+    margin: 16px auto;
+    width: 448px;
+}
+
+/*=== BLOG LIST ===*/
+.blog .blog-list {
+    display: flex;
+    gap: 0 30px;
+    margin-top: 55px;
+    overflow: hidden;
+}
+
+.blog .blog-item {
+    width: calc(33.33% - 20px);
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: #FFF;
+}
+
+.blog .blog-item .thumb {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 16px 16px 0px 0px;
+}
+
+.blog .blog-item .info {
+    padding: 20px 30px 28px;
+}
+
+.blog .blog-item .date {
+    display: inline-flex;
+    padding-bottom: 12px;
     align-items: center;
+    position: relative;
+    color: var(--text-color);
+    font-size: var(--fz-14);
+    font-weight: 400;
+    line-height: 1.85;
+}
+
+.blog .blog-item .date::before {
+    display: inline-block;
+    content: '';
+    width: 6px;
+    height: 6px;
+    margin-right: 4px;
+    border-radius: 50%;
+    background: var(--primary-color);
+}
+
+.blog .blog-item .date::after {
+    display: block;
+    content: '';
+    height: 1px;
+    position: absolute;
+    left: 0;
+    right: -27px;
+    bottom: 0;
+    border-radius: 1px;
+    background: #E2DFDA;
+}
+
+.blog .blog-item .title  a {
+    display: inline-block;
+    margin: 12px 0;
+    color: var(--very-dark);
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--fz-16);
+    font-weight: 600;
+    line-height: 1.75;
+}
+
+.blog .blog-item .cta-btn {
+    font-size: var(--fz-14);
+}
+
+.blog .blog-item:hover {
+    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+
+.blog .blog-item .cta-btn:hover {
+    background: var(--primary-color);
+}
+
+/*=== DOT SLIDE ===*/
+.dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 38px;
+    gap: 6px;
+}
+
+.dots .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--text-color);
+    cursor: pointer;
+}
+
+.dots .dot.active {
+    cursor: default;
+    background: var(--primary-color);
 }
